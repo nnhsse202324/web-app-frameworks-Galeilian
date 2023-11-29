@@ -9,12 +9,13 @@
 // JavaScript uses console.log() instead of Java's System.out.println()
 console.log("Hello World");
 console.log("I'm learning JavaScript!");
+
 /**********************************************************
  * Variable declaration, assignment, and scope
  **********************************************************/
 
 /**
- * variable declaration
+ * variable declaration:
  *  use the keyword "let"
  *  similar to a local variable in Java
  *  block scoped
@@ -22,18 +23,24 @@ console.log("I'm learning JavaScript!");
 let x;
 
 /**
- * variable assignment
- *  may be done after variable declaration or at same time
+ * variable assignment:
+ *  may be done after variable declaration or at the same time
  */
 x = 7;
+console.log(x);
+x = 11;
+console.log(x);
 
 /**
- * constants (immutable value)
+ * constants (immutable value):
  *  use the keyword "const"
- *  similar to the keyword final in Java
+ *  similar to the final keyword in Java
  *  may be initialized at the same time as declaration or later
+ *  use all uppercase letters for constants assigned to literals
+ *  use camelCase for constants assigned to expressions
  */
 const HOSTNAME = "localhost";
+console.log(HOSTNAME);
 
 /**
  * var keyword:
@@ -42,6 +49,7 @@ const HOSTNAME = "localhost";
  *  rarely used in modern Javascript
  */
 var y = 11;
+console.log(y);
 
 /**********************************************************
  * Primitive Types
@@ -53,12 +61,12 @@ var y = 11;
  *  similar to a double in Java
  */
 let a = 7;
-a = 7.351235;
+a = 3.14;
 console.log(typeof a);
 
 /**
  * String
- *  a primitive type in Javascript
+ *  a primitive type in JavaScript
  *  literals are enclosed in single or double quotes
  *  backticks enable template strings
  *  similar to Java's String class
@@ -78,11 +86,11 @@ console.log(typeof a);
 /**
  * null
  *  a primitive type with only one value: null
- *  represent nothing, empty, or unknown
- *  no like a reference to a non-existent object like in Java
+ *  represents nothing, empty, or unknown
+ *  not like a reference to a non-existent object like in Java
  */
 a = null;
-console.log(typeof a); // returns object (old bug in JavaScript)
+console.log(typeof a); // returns object ¯\_(ツ)_/¯ (old bug in JavaScript)
 
 /**
  * undefined
@@ -99,17 +107,17 @@ console.log(typeof c);
  **********************************************************/
 
 /**
- * all value have an implicit boolean value due to JavaScripts's
+ * all values have an implicit boolean value due to JavaScript's
  *  type coercion
  */
 if (1 && "Hello") {
-  console.log("1 and Hello are True");
+  console.log("1 and Hello are true");
 }
 
 if (0 || "" || null || undefined) {
   // 0, empty string, null, and undefined are not true
 } else {
-  console.log("0, empty  string, null and undefined are false");
+  console.log("0, empty string, null, and undefined are false");
 }
 
 /**
@@ -121,4 +129,31 @@ if ("34" == 34) {
 
 if (3 != true) {
   console.log("true is converted to 1 and then compared to 3");
+}
+
+/**
+ * the strict equality operator (===) does not perform type coercion;
+ *  returns false if the types are different
+ *  most similar to Java's == operator
+ * recommended to use this operator instead of the equality operator (==)
+ */
+if ("34" === 34) {
+  // not equal because they are different types
+} else {
+  console.log(
+    "'34' is not strictly equal to 34 because they are different types"
+  );
+
+  /**
+   * Recommendations regarding null and undefined:
+   *  only use the strict equality and inequality operators (===, !==)
+   * comparison and the equality operator will, most likely, return
+   *  unexpected results
+   */
+  if (a === null) {
+    console.log("a is null");
+  }
+  if (c === undefined) {
+    console.log("c is undefined");
+  }
 }

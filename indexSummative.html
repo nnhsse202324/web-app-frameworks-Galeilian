@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planets</title>
+  <style>
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    h1 {
+      color: #009688;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    #planetList {
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #009688;
+      color: #fff;
+      padding: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* End of your CSS styles */
+  </style>
+</head>
+
+<body>
+
+  <h1>Planets</h1>
+
+  <p>
+    This subset of planets was generated based on the following query parameters:
+    <ul>
+      <li>Main atmosphere contains H2</li>
+      <li>The planet is further from the sun than Earth</li>
+    </ul>
+  </p>
+
+  <div id="planetList">
+    <ul>
+      <li><b>Planet1</b>: <br />main atmosphere: Atmosphere1 <br />mean surface temperature (degrees C): Temperature1 <br /></li>
+    </ul>
+  </div>
+
+  <button id="darkModeBtn">Dark Mode</button>
+  <button id="lightModeBtn">Light Mode</button>
+
+  <script>
+    document.getElementById("darkModeBtn").addEventListener("click", function () {
+    });
+
+    document.getElementById("lightModeBtn").addEventListener("click", function () {
+    });
+  </script>
+
+</body>
+
+</html>
