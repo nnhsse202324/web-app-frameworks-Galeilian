@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Family Vacation in Spain</title>
+  <link rel="stylesheet" href="styles/styleReassessment.css" />
+</head>
+
+<body>
+
+  <h1>Family Vacation in Spain</h1>
+
+  <p>
+    This subset of Airbnb properties in Spain was generated based on the following query parameters:
+    <ul>
+      <li>The country of the Airbnb's address is Spain</li>
+      <li>The review scores rating is greater than or equal to 90</li>
+      <li>The number of beds at the Airbnb is greater than or equal to 6</li>
+    </ul>
+  </p>
+
+  <div id="airbnbList">
+    <!--
+      to be pasted
+    -->
+  </div>
+
+  <button id="darkModeBtn">Dark Mode</button>
+  <button id="lightModeBtn">Light Mode</button>
+
+  <script src="scripts/mainReassessment.js"></script>
+
+</body>
+
+</html>
+
